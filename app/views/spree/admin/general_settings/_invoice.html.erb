@@ -16,4 +16,36 @@
     <%= number_field_tag :print_invoice_logo_scale, Spree::PrintInvoice::Config[:print_invoice_logo_scale], :in => 1...100 %>
   </div>
 
+
+  <div class="field">
+    <%= label_tag :invoice_fiz_name, Spree.t(:invoice_fiz_name) %><br>
+    <%= text_field_tag :invoice_fiz_name, Spree::PrintInvoice::Config[:invoice_fiz_name], :class => 'fullwidth select2'%>
+  </div>
+
+  <div class="field">
+    <%= label_tag :invoice_fiz_inn, Spree.t(:invoice_fiz_inn) %><br>
+    <%= text_field_tag :invoice_fiz_inn, Spree::PrintInvoice::Config[:invoice_fiz_inn], :class => 'fullwidth select2'%>
+  </div>
+
+  <div class="field">
+    <%= label_tag :invoice_fiz_rs, Spree.t(:invoice_fiz_rs) %><br>
+    <%= text_field_tag :invoice_fiz_rs, Spree::PrintInvoice::Config[:invoice_fiz_rs], :class => 'fullwidth select2'%>
+  </div>
+
+  <div class="field">
+    <%= label_tag :invoice_fiz_otdelenie, Spree.t(:invoice_fiz_otdelenie) %><br>
+    <%= text_field_tag :invoice_fiz_otdelenie, Spree::PrintInvoice::Config[:invoice_fiz_otdelenie], :class => 'fullwidth select2'%>
+  </div>
+
+  <div class="field">
+    <%= label_tag :invoice_fiz_bik, Spree.t(:invoice_fiz_bik) %><br>
+    <%= text_field_tag :invoice_fiz_bik, Spree::PrintInvoice::Config[:invoice_fiz_bik], :class => 'fullwidth select2'%>
+  </div>
+
+  <div class="field">
+    <%= label_tag :invoice_fiz_korsch, Spree.t(:invoice_fiz_korsch) %><br>
+    <%= text_field_tag :invoice_fiz_korsch, Spree::PrintInvoice::Config[:invoice_fiz_korsch], :class => 'fullwidth select2'%>
+  </div>
+
+
 </fieldset>

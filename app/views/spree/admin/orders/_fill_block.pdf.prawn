@@ -29,7 +29,7 @@ text_box "Форма № ПД-4", :size => small_font, :at => [width - 60, curso
 
 font @bold
 move_down 10
-text_box "Ваганов Игорь Станиславович", :at => [width - 260, cursor],:size => 11
+text_box Spree::PrintInvoice::Config[:invoice_fiz_name], :at => [width - 260, cursor],:size => 11
 
 font @normal
 move_down 15
@@ -37,8 +37,8 @@ text_box "(наименование получателя платежа)", :at =
 
 font @bold
 move_down 10
-text_box "ИНН: 232907433491", :at => [181, cursor],:size => 11
-text_box "р/с: 40817810552090437453", :at => [330, cursor],:size => 11
+text_box "ИНН: "+Spree::PrintInvoice::Config[:invoice_fiz_inn], :at => [181, cursor],:size => 11
+text_box "р/с: "+Spree::PrintInvoice::Config[:invoice_fiz_rs], :at => [330, cursor],:size => 11
 
 font @normal
 move_down 13
@@ -52,13 +52,13 @@ move_down 25
 text_box "в", :at => [width - 360, cursor+12], :size=>12
 
 font @bold
-text_box "Отделение №5221 Сбербанка России", :at => [width - 322, cursor+12], :size=>9
+text_box Spree::PrintInvoice::Config[:invoice_fiz_otdelenie], :at => [width - 322, cursor+12], :size=>9
 
 font @normal
 text_box "БИК", :at => [width - 130, cursor+12], :size=>12
 
 font @bold
-text_box "046015602", :at => [width - 90, cursor+12], :size=>11
+text_box Spree::PrintInvoice::Config[:invoice_fiz_bik], :at => [width - 90, cursor+12], :size=>11
 
 font @normal
 text_box "(наименование банка получателя)", :at => [width - 295, cursor], :size=>9
@@ -67,7 +67,7 @@ move_down 12
 text_box "Номер кор.сч. банка получателя платежа", :at => [width - 360, cursor], :size=>11
 
 font @bold
-text_box "30101810600000000602", :at => [width -190, cursor], :size=>11
+text_box  Spree::PrintInvoice::Config[:invoice_fiz_korsch], :at => [width -190, cursor], :size=>11
 
 move_down 16
 text_box "Оптала заказа № "+@order.number, :at => [width -350, cursor], :size=>11

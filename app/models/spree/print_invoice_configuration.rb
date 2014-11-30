@@ -8,6 +8,14 @@ module Spree
     preference :print_buttons, :string, :default => 'invoice'
     preference :prawn_options, :hash, :default => {}
 
+    preference :invoice_fiz_name, :string, :default => "Ваганов Игорь Станиславович"
+    preference :invoice_fiz_inn, :string, :default => "232907433491"
+    preference :invoice_fiz_rs, :string, :default => "40817810552090437453"
+    preference :invoice_fiz_otdelenie, :string, :default => "Отделение №5221 Сбербанка России"
+    preference :invoice_fiz_bik, :string, :default => "046015602"
+    preference :invoice_fiz_korsch, :string, :default => "30101810600000000602"
+
+
     def use_sequential_number?
       print_invoice_next_number.present? && print_invoice_next_number > 0
     end
